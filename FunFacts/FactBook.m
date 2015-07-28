@@ -31,7 +31,7 @@
 
 
 -(NSString *) randomFact{
-    int random = arc4random_uniform((int)self.facts.count);
+    int random = arc4random_uniform(14);
     return [self.facts objectAtIndex:random];
 }
 
