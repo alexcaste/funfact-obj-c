@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FactBook.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.factbook = [[FactBook alloc] init];
+
+    self.funFactLabel.text = [self.factbook.facts objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +29,8 @@
 
 
 - (IBAction)showFunFact {
-    self.funFactLabel.text = @"Another Interesting fact";
+    
+   self.funFactLabel.text = [self.factbook.facts objectAtIndex:1];
 }
 
 @end
