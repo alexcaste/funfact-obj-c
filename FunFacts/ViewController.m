@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.factbook = [[FactBook alloc] init];
 
-    self.funFactLabel.text = [self.factbook.facts objectAtIndex:0];
+    self.funFactLabel.text = [self.factbook randomFact];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +30,7 @@
 
 - (IBAction)showFunFact {
     
-   self.funFactLabel.text = [self.factbook.facts objectAtIndex:1];
+   self.funFactLabel.text = [self.factbook randomFact];
 }
 
 @end
